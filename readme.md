@@ -1,3 +1,5 @@
+twilist
+=======================
 twilist is a tool to help me send my tweet draft by having a list of
 tweet in a text file.
 
@@ -37,3 +39,7 @@ at the index and send a specific item with this command:
     twilist.py send 3 (index value)
     
 
+Requirements
+------------------------
+Twilist require you to have twidge in your system and already set up
+with your account
