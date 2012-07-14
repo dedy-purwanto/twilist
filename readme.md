@@ -51,7 +51,9 @@ Why?
 ------------------------
 I often have a lots to say in twitter, but sending all of them at
 once might be annoying for others to see, so I want to keep them 
-somewhere and send them at the time I want it (not scheduled)
+somewhere and send them at the time I want it (not scheduled), that way
+I can store my thoughts right away and not losing it because writing it
+later might spoil my mood.
 
 So then twilist will coming handing, I set up aliases "twa" for 
 "twilist.py add" and "twilist" for "twilist.py" in my bashrc, and
