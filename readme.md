@@ -43,3 +43,9 @@ Requirements
 ------------------------
 Twilist require you to have twidge in your system and already set up
 with your account
+
+Why?
+------------------------
+I often have a lots to say in twitter, but sending all of them at
+once might be annoying for others to see, so I want to keep them 
+somewhere and send them at the time I want it (not scheduled)
