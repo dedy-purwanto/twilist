@@ -105,7 +105,7 @@ class Twilist():
 
         if index is not None:
             try:
-                text = self.list(index)
+                text = self.list[index]
                 self.send_tweet(text)
 
             except:
