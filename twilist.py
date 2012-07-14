@@ -114,7 +114,6 @@ class Twilist():
             else:
                 self.pop_list(index)
 
-
     def list_subparser(self, namespace):
         print "List of draft tweets:"
         print "ID\tTweet"
