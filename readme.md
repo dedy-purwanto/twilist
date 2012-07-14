@@ -44,8 +44,16 @@ Requirements
 Twilist require you to have twidge in your system and already set up
 with your account
 
+All twilist data will be saved in "twilist" file inside the folder you
+run the command from.
+
 Why?
 ------------------------
 I often have a lots to say in twitter, but sending all of them at
 once might be annoying for others to see, so I want to keep them 
 somewhere and send them at the time I want it (not scheduled)
+
+So then twilist will coming handing, I set up aliases "twa" for 
+"twilist.py add" and "twilist" for "twilist.py" in my bashrc, and
+run the command in my Ubuntu One folder to make sure that the tweet
+data are syncronized between my home computer and my office computer.
