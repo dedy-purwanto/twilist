@@ -103,14 +103,10 @@ class Twilist():
                 print "Provide a valid index, -h for help"
 
         if index is not None:
-            try:
-                print "Tweet index: 0"
-                text = self.list[index]
-                self.send_tweet(text)
-
-            except:
+            print "Tweet index: 0"
+            text = self.list[index]
+            if self.send_tweet(text) != 0:
                 print "Failed to send tweet due to external error"
-
             else:
                 self.pop_list(index)
 
@@ -124,7 +120,7 @@ class Twilist():
     def send_tweet(self, text):
         print "Tweeting: %s" % text
         command = ['twidge', 'update', text]
-        call(command)
+        return call(command)
 
     def process(self):
         cmd = self.parser.parse_args()
