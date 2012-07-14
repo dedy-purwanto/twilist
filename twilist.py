@@ -124,7 +124,7 @@ class Twilist():
 
     def send_tweet(self, text):
         print "Tweeting: %s" % text
-        command = ['twidge', 'updateaaaaa', text]
+        command = ['twidge', 'update', text]
         call(command)
 
     def process(self):
