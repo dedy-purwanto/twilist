@@ -59,3 +59,6 @@ So then twilist will coming handing, I set up aliases "twa" for
 "twilist.py add" and "twilist" for "twilist.py" in my bashrc, and
 run the command in my Ubuntu One folder to make sure that the tweet
 data are syncronized between my home computer and my office computer.
+
+And  "twilist.py send" can also attached to cronjob if we want to 
+schedule the tweet
