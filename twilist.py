@@ -99,6 +99,7 @@ class Twilist():
                 index = int(target)
                 if index <= 0 or index > len(self.list):
                     index = None
+
             except ValueError:
                 print "Provide a valid index, -h for help"
 
