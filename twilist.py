@@ -12,12 +12,15 @@ class Twilist():
 
     parser = None
     subparsers = None
-    filepath = 'twilist'
+    default_file = 'twilist'
+    filepath = None
     text_max_length = 150
     list = None
 
     def __init__(self, *args, **kwargs):
         parser = argparse.ArgumentParser()
+
+        parser.add_argument('--file', default=self.default_file)
 
         subparsers = parser.add_subparsers()
 
@@ -40,12 +43,6 @@ class Twilist():
         self.parser = parser
         self.subparsers = subparsers
 
-        try:
-            file = open(self.filepath, 'r')
-            self.list = [line.replace(os.linesep, '') for line in file]
-            file.close()
-        except IOError:
-            self.list = []
 
     def append_list(self, text):
         self.list.append(text)
@@ -124,6 +121,16 @@ class Twilist():
 
     def process(self):
         cmd = self.parser.parse_args()
+
+        self.filepath = cmd.file
+
+        try:
+            file = open(self.filepath, 'r')
+            self.list = [line.replace(os.linesep, '') for line in file]
+            file.close()
+        except IOError:
+            self.list = []
+
         cmd.func(cmd)
 
 
