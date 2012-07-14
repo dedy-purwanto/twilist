@@ -47,7 +47,7 @@ class Twilist():
             self.file.write("%s%s" % (text, os.linesep))
             print 'Saved as draft.'
 
-        if action == 'send':
+        elif action == 'send':
             print 'Sending tweet without saving..'
             self.send_tweet(text)
 
