@@ -5,7 +5,7 @@ tweet in a text file.
 
 Adding a tweet to a list:
     
-    twilist.py "Foo bar"
+    twilist.py add "Foo bar"
     
 Sending a tweet in a list (first in first out):
     
