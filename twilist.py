@@ -36,17 +36,20 @@ class Twilist():
         self.file = open(self.filepath, 'a')
 
     def add_subparser(self, namespace):
-        if len(namespace.text) > self.text_max_length:
+        text = namespace.text
+        action = namespace.action
+
+        if len(text) > self.text_max_length:
             print "Text longer than %s characters!" % self.text_max_length
             return
 
-        if namespace.action == 'draft':
-            self.file.write("%s%s" % (namespace.text, os.linesep))
+        if action == 'draft':
+            self.file.write("%s%s" % (text, os.linesep))
             print 'Saved as draft.'
 
-        if namespace.action == 'send':
+        if action == 'send':
             print 'Sending tweet without saving..'
-            self.send_tweet(namespace.text)
+            self.send_tweet(text)
 
     def send_tweet(self, text):
         print 'Sent'
