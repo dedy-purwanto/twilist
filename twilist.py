@@ -103,12 +103,14 @@ class Twilist():
             except ValueError:
                 print "Provide a valid index, -h for help"
 
-        if index:
+        if index is not None:
             try:
                 text = self.list(index)
                 self.send_tweet(text)
+
             except:
                 print "Failed to send tweet due to external error"
+
             else:
                 self.pop_list(index)
 
