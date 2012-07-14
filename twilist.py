@@ -3,6 +3,7 @@
 import argparse
 import os
 from random import randint
+from subprocess import call
 
 class TwilistException(Exception): pass
 
@@ -121,7 +122,8 @@ class Twilist():
             print "%s\t%s" % (index, text)
 
     def send_tweet(self, text):
-        print 'Sent'
+        command = ['twidge', 'update', text]
+        call(command)
 
     def process(self):
         cmd = self.parser.parse_args()
