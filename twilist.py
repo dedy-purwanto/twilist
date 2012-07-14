@@ -52,9 +52,6 @@ class Twilist():
         self.save_list()
 
     def pop_list(self, index):
-        if len(self.list) == 0:
-            raise TwilistException("You don't have list of tweets")
-
         text = self.list.pop(index)
         self.save_list()
         return text
@@ -82,37 +79,36 @@ class Twilist():
 
     def send_subparser(self, namespace):
         target = namespace.target
-        text = None
+        index = None
 
-        try:
+        if len(self.list) == 0:
+            print "You have no tweet in your list"
 
-            if target == 'first':
-                text = self.pop_list(0)
-                print 'Sending first tweet..\r\n%s' % text
+        if target == 'first':
+            index = 0
 
-            elif target == 'last':
-                text = self.pop_list(len(self.list)-1)
-                print 'Sending latest tweet..\r\n%s' % text
-            
-            elif target == 'rand':
-                index = randint(0, len(self.list)-1)
-                text = self.pop_list(index)
-                print 'Sending tweet #%s\r\n%s' % (index, text) 
-
-            else:
-                try:
-                    index = int(target)
-                    text = self.pop_list(index)
-                    print 'Sending tweet #%s\r\n%s' % (index, text) 
-                except ValueError:
-                    print "Provide a valid index, -h for help"
-
-        except TwilistException, e:
-            print e
+        elif target == 'last':
+            index = len(self.list)-1
+        
+        elif target == 'rand':
+            index = randint(0, len(self.list)-1)
 
         else:
-            if text:
+            try:
+                print "Tweet index: 0"
+                index = int(target)
+            except ValueError:
+                print "Provide a valid index, -h for help"
+
+        if index:
+            try:
+                text = self.list(index)
                 self.send_tweet(text)
+            except:
+                print "Failed to send tweet due to external error"
+            else:
+                self.pop_list(index)
+
 
     def list_subparser(self, namespace):
         print "List of draft tweets:"
@@ -122,7 +118,8 @@ class Twilist():
             print "%s\t%s" % (index, text)
 
     def send_tweet(self, text):
-        command = ['twidge', 'update', text]
+        print "Tweeting: %s" % text
+        command = ['twidge', 'updateaaaaa', text]
         call(command)
 
     def process(self):
