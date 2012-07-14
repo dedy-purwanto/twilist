@@ -95,7 +95,6 @@ class Twilist():
 
         else:
             try:
-                print "Tweet index: 0"
                 index = int(target)
                 if index <= 0 or index > len(self.list):
                     index = None
@@ -105,6 +104,7 @@ class Twilist():
 
         if index is not None:
             try:
+                print "Tweet index: 0"
                 text = self.list[index]
                 self.send_tweet(text)
 
