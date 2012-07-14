@@ -4,8 +4,8 @@ import argparse
 import os
 from random import randint
 
-class TwilistException(Exception):
-    pass
+class TwilistException(Exception): pass
+
 
 class Twilist():
 
