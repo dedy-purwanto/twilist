@@ -98,6 +98,20 @@ class Twilist():
 
         self.pop_list(index)
 
+    def replace_subparser(self, namespace):
+        index = namespace.index
+        text = namespace.index
+
+        try:
+            index = int(index)
+        except ValueError:
+            print "Index must be an integer"
+            return
+
+        if index < 0 or index >= len(self.list):
+            print "Index must be between 0 and %s" % len(self.list)
+            return
+
     def send_subparser(self, namespace):
         target = namespace.target
         index = None
