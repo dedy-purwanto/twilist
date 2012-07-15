@@ -36,11 +36,15 @@ This will return a list of tweet and it's index, and then you can look
 at the index and send a specific item with this command:
 
     
-    twilist.py send 3 (index value)
+    twilist.py send 3 
 
 You will also be able to delete specific draft:    
 
-    twilist.py del 3 (index value)
+    twilist.py del 3
+
+You can also replace specific tweet draft:
+    
+    twilist.py rep 3 "New tweet" 
 
 Requirements
 ------------------------
