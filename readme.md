@@ -69,10 +69,11 @@ somewhere and send them at the time I want it (not scheduled), that way
 I can store my thoughts right away and not losing it because writing it
 later might spoil my mood.
 
-So then twilist will coming handing, I set up aliases "twa" for 
-"twilist.py add" and "twilist" for "twilist.py" in my bashrc, and
-run the command in my Ubuntu One folder to make sure that the tweet
-data are syncronized between my home computer and my office computer.
+For example, I use twilist to store my tweet drafts, sync it using
+Ubuntu One to get the same list at my home and my office, and run it
+every 30 minutes, so in my bashrc I put these aliases
 
-And  "twilist.py send" can also attached to cronjob if we want to 
-schedule the tweet
+    alias twilist = '/usr/bin/twilist.py --file $HOME/Ubuntu One/twilist.txt'
+    alias ta = 'twilist add'
+    alias tl = 'twilist list'
+
