@@ -24,29 +24,34 @@ class Twilist():
 
         subparsers = parser.add_subparsers()
 
-        add_subparser = subparsers.add_parser('add')
-        add_subparser.add_argument('text')
+        add_subparser = subparsers.add_parser('add', 
+                help='Add new draft')
+        add_subparser.add_argument('text', help='Your tweet')
         add_subparser.add_argument('action', nargs='?', default='draft',
                 help="'draft' (default) or 'send'")
         add_subparser.set_defaults(func=self.add_subparser)
 
-        remove_subparser = subparsers.add_parser('del')
-        remove_subparser.add_argument('index')
+        remove_subparser = subparsers.add_parser('del', 
+                help='Delete specific draft')
+        remove_subparser.add_argument('index', help='Your tweet index')
         remove_subparser.set_defaults(func=self.remove_subparser)
 
-        replace_subparser = subparsers.add_parser('rep')
-        replace_subparser.add_argument('index')
-        replace_subparser.add_argument('text')
+        replace_subparser = subparsers.add_parser('rep',
+                help='Replace specific draft')
+        replace_subparser.add_argument('index', help='Your tweet index')
+        replace_subparser.add_argument('text', help='Your new tweet')
         replace_subparser.set_defaults(func=self.replace_subparser)
 
-        send_subparser = subparsers.add_parser('send')
+        send_subparser = subparsers.add_parser('send', 
+                help='Send draft')
         send_subparser.add_argument('target', nargs='?', 
                 default='first',
                 help="'first' (default), 'last', 'rand'"\
                      ", or index from list")
         send_subparser.set_defaults(func=self.send_subparser)
 
-        list_subparser = subparsers.add_parser('list')
+        list_subparser = subparsers.add_parser('list', 
+                help='List your current drafts')
         list_subparser.set_defaults(func=self.list_subparser)
 
         self.parser = parser
