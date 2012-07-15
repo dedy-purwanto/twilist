@@ -100,7 +100,7 @@ class Twilist():
 
     def replace_subparser(self, namespace):
         index = namespace.index
-        text = namespace.index
+        text = namespace.text
 
         try:
             index = int(index)
@@ -111,6 +111,9 @@ class Twilist():
         if index < 0 or index >= len(self.list):
             print "Index must be between 0 and %s" % len(self.list)
             return
+
+        self.list[index] = text
+        self.save_list()
 
     def send_subparser(self, namespace):
         target = namespace.target
