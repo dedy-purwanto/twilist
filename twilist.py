@@ -78,6 +78,17 @@ class Twilist():
             print 'Sending tweet without saving..'
             self.send_tweet(text)
 
+    def remove_subparser(self, namespace):
+        index = namespace.target
+
+        try:
+            index = int(index)
+        except ValueError:
+            print "Index must be an integer"
+            return
+        
+        
+
     def send_subparser(self, namespace):
         target = namespace.target
         index = None
