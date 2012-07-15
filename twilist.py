@@ -90,8 +90,8 @@ class Twilist():
         if index < 0 or index >= len(self.list):
             print "Index must be between 0 and %s" % len(self.list)
             return
-        
-        
+
+        self.pop_list(index)
 
     def send_subparser(self, namespace):
         target = namespace.target
