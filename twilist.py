@@ -30,6 +30,10 @@ class Twilist():
                 help="'draft' (default) or 'send'")
         add_subparser.set_defaults(func=self.add_subparser)
 
+        remove_subparser = subparsers.add_parser('remove')
+        remove_subparser.remove_argument('index')
+        remove_subparser.set_defaults(func=self.remove_subparser)
+
         send_subparser = subparsers.add_parser('send')
         send_subparser.add_argument('target', nargs='?', 
                 default='first',
