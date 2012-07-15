@@ -46,6 +46,13 @@ You can also replace specific tweet draft:
     
     twilist.py rep 3 "New tweet" 
 
+By default, all draft will be saved inside the same folder from which 
+you run the twilist.py, but you can specify another source instead, 
+using:
+
+    twilist.py --file /path/to/twilist.txt
+
+
 Requirements
 ------------------------
 Twilist require you to have twidge in your system and already set up
