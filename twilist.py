@@ -34,6 +34,11 @@ class Twilist():
         remove_subparser.add_argument('index')
         remove_subparser.set_defaults(func=self.remove_subparser)
 
+        replace_subparser = subparsers.add_parser('rep')
+        replace_subparser.add_argument('index')
+        replace_subparser.add_argument('text')
+        replace_subparser.set_defaults(func=self.replace_subparser)
+
         send_subparser = subparsers.add_parser('send')
         send_subparser.add_argument('target', nargs='?', 
                 default='first',
