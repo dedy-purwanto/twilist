@@ -37,7 +37,10 @@ at the index and send a specific item with this command:
 
     
     twilist.py send 3 (index value)
-    
+
+You will also be able to delete specific draft:    
+
+    twilist.py del 3 (index value)
 
 Requirements
 ------------------------
