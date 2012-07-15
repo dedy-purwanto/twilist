@@ -79,7 +79,7 @@ class Twilist():
             self.send_tweet(text)
 
     def remove_subparser(self, namespace):
-        index = namespace.target
+        index = namespace.index
 
         try:
             index = int(index)
