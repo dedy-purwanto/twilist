@@ -86,6 +86,10 @@ class Twilist():
         except ValueError:
             print "Index must be an integer"
             return
+
+        if index < 0 or index >= len(self.list):
+            print "Index must be between 0 and %s" % len(self.list)
+            return
         
         
 
