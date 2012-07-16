@@ -76,8 +76,8 @@ class Twilist():
         action = namespace.action
 
         if len(text) > self.text_max_length:
-            print ("Text longer than %s characters!" % 
-                    self.text_max_length)
+            print ("Text longer than %s characters!, text length is %s" % 
+                    (self.text_max_length, len(text)))
             return
 
         if action == 'draft':
