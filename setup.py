@@ -9,6 +9,7 @@ setup(
     author_email="kecebongsoft@gmail.com",
     url="http://github.com/kecebongsoft/twilist",
     keywords=["tweet","twidge"],
+    scripts=["scripts/twilist"],
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
