@@ -155,7 +155,7 @@ class Twilist():
                 print "Provide a valid index, -h for help"
 
         if index is not None:
-            print "Tweet index: 0"
+            print "Tweet index: %s" % index
             text = self.list[index]
             if self.send_tweet(text) != 0:
                 print "Failed to send tweet due to external error"
