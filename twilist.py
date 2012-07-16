@@ -14,7 +14,7 @@ class Twilist():
     subparsers = None
     default_file = 'twilist'
     filepath = None
-    text_max_length = 150
+    text_max_length = 140
     list = None
 
     def __init__(self, *args, **kwargs):
