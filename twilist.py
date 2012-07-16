@@ -12,7 +12,7 @@ class Twilist():
 
     parser = None
     subparsers = None
-    default_file = 'twilist'
+    default_file = 'twilist_data.txt'
     filepath = None
     text_max_length = 140
     list = None
