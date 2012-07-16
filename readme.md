@@ -73,7 +73,7 @@ For example, I use twilist to store my tweet drafts, sync it using
 Ubuntu One to get the same list at my home and my office, and run it
 every 30 minutes, so in my bashrc I put these aliases
 
-    alias twilist = '/usr/bin/twilist.py --file "$HOME/Ubuntu One/twilist.txt"'
+    alias tw = 'twilist --file "$HOME/Ubuntu One/twilist.txt"'
     alias ta = 'twilist add'
     alias tl = 'twilist list'
 
