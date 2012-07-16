@@ -80,4 +80,4 @@ every 30 minutes, so in my bashrc I put these aliases
 I also soft-linked twilist.py to /usr/bin/. And to run it for every
 30 minutes, in my crontab:
 
-    */29 * * * * /usr/bin/twilist.py --file "/home/kecebongsoft/Ubuntu One/twilist.txt" send
+    30 * * * * /usr/bin/twilist.py --file "/home/kecebongsoft/Ubuntu One/twilist.txt" send
