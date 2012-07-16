@@ -118,8 +118,16 @@ class Twilist():
             print "Index must be between 0 and %s" % len(self.list)
             return
 
+        old_text = self.list[index]
         self.list[index] = text
         self.save_list()
+
+        print "Replaced:%s[%s] : %s%s[%s] : %s" % (
+                os.linesep,
+                index, old_text,
+                os.linesep,
+                index, text
+                )
 
     def send_subparser(self, namespace):
         target = namespace.target
