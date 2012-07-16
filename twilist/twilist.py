@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import argparse
 import os
 from random import randint
@@ -187,8 +185,3 @@ class Twilist():
             self.list = []
 
         cmd.func(cmd)
-
-
-if __name__ == "__main__":
-    twilist = Twilist()
-    twilist.process()
