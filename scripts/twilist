@@ -1,5 +1,5 @@
 #!/usr/bin/env python
 
-impot twilist
-twilist = Twilist()
-twilist.process()
+from twilist import Twilist
+t = Twilist()
+t.process()
