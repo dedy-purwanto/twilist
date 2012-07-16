@@ -101,7 +101,8 @@ class Twilist():
             print "Index must be between 0 and %s" % len(self.list)
             return
 
-        self.pop_list(index)
+        text = self.pop_list(index)
+        print "Removed [%s] : %s" % (index, text)
 
     def replace_subparser(self, namespace):
         index = namespace.index
