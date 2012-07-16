@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name="twilist",
     packages=["twilist"],
-    version=["0.1"],
+    version="0.1",
     description=["managing tweet draft through CLI"],
     author="kecebongsoft",
     author_email="kecebongsoft@gmail.com",
