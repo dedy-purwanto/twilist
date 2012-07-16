@@ -13,7 +13,6 @@ setup(
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
-        "Development Status :: 0.1 - Beta",
     ],
     long_description="""\
     twilist
