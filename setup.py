@@ -4,7 +4,7 @@ setup(
     name="twilist",
     packages=["twilist"],
     version="0.1",
-    description=["managing tweet draft through CLI"],
+    description="managing tweet draft through CLI",
     author="kecebongsoft",
     author_email="kecebongsoft@gmail.com",
     url="http://github.com/kecebongsoft/twilist",
