@@ -1,12 +1,5 @@
 from distutils.core import setup
 
-description = """
-    twilist is a CLI tool for you to manage your tweet drafts from
-    command line, for full usage, see readme.md on the github repo:
-
-    http://github.com/kecebongsoft/twilist
-"""
-
 setup(
     name='twilist',
     packages=['twilist'],
@@ -21,5 +14,14 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Development Status :: 0.1 - Beta',
     ],
-    long_description=description
+    long_description="""\
+    twilist
+    ------------------------------------------------------------
+
+    twilist is a CLI tool for you to manage your tweet drafts from
+    command line, for full usage, see readme.md on the github repo:
+
+    http://github.com/kecebongsoft/twilist
+
+    """
 )
